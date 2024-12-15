@@ -42,7 +42,7 @@ void AAButton::Tick(float DeltaTime)
 			auto newLocation = FMath::FInterpTo(_currentLocation, _targetLocation, DeltaTime, 5);
 
 			//auto newAngle = FMath::Lerp(_currentAngle, _targetAngle, Deltatime);
-			ButtonMesh->SetRelativeLocation(FVector(0, newLocation, 0));
+			ButtonMesh->SetRelativeLocation(FVector(newLocation, 0, 0));
 			_currentLocation = newLocation;
 			if (FMath::IsNearlyEqual(_currentLocation, _targetLocation, 0.1))
 			{
@@ -69,5 +69,10 @@ void AAButton::ToggleDoor()
 bool AAButton::GetIsToggling()
 {
 	return isToggling;
+}
+
+void AAButton::SetIsToggling()
+{
+	isToggling = false;
 }
 

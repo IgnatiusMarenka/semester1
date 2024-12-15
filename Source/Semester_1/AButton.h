@@ -28,6 +28,7 @@ public:
 	TObjectPtr<UStaticMeshComponent> ButtonMesh;
 
 	bool GetIsToggling();
+	void SetIsToggling();
 
 protected:
 	// Called when the game starts or when spawned

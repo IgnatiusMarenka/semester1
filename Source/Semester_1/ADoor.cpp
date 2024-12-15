@@ -60,6 +60,7 @@ void AADoor::Tick(float DeltaTime)
 		if (_targetButton->GetIsToggling())
 		{
 			this->Toggle();
+			_targetButton->SetIsToggling();
 		}
 	}
 	
